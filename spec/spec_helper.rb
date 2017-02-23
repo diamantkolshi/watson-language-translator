@@ -4,6 +4,6 @@ $: << File.join(APP_ROOT, 'lib/alchemy_language')
 require 'rest-client'
 require 'json'
 require 'pry'
-require 'watson_language_translator'
+require 'watson_language'
 
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
