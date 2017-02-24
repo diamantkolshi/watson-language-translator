@@ -7,9 +7,15 @@ describe WatsonLanguage do
     allow(ENV).to receive(:[]).with("password").and_return("language_password")
 	end
 
-	describe ".autherize" do
+	describe ".username" do
 		it "return env varibales" do
-			expect(subject.autherize).to eq("{language_username}:{language_password}")
+			expect(subject.username).to eq("4d123cdf-cd4d-4e52-8e9f-032ddd21958b")
+		end
+	end
+
+	describe ".password" do
+		it "return env varibales" do
+			expect(subject.password).to eq("GiYMXcMbIgiz")
 		end
 	end
 

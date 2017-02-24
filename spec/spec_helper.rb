@@ -1,5 +1,5 @@
 APP_ROOT = File.expand_path(File.join(File.dirname(__FILE__), 'lib/*.rb', '..'))
-$: << File.join(APP_ROOT, 'lib/alchemy_language')
+$: << File.join(APP_ROOT, 'lib/watson_language')
 
 require 'rest-client'
 require 'json'
