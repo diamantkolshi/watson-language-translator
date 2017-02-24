@@ -2,17 +2,18 @@ module WatsonLanguage
   module ActiveMethod
     class Base < ActiveMethod::Extra
       include WatsonLanguage::Generators::LanguageRequest
-      attr_accessor :text, :autherize, :json_result, :options
+      attr_accessor :text, :username, :password, :json_result, :options
 
-      def initialize(text, options={})
+      def initialize(text = nil, options={})
         @text = text
-        @autherize = WatsonLanguage.autherize
+        @username = WatsonLanguage.username
+        @password = WatsonLanguage.password
         @options = options
         @json_result = request
       end
 
       def request
-        # json_parser(endpoint)
+        json_parser(endpoint)
       end
 
       def params_addressable
