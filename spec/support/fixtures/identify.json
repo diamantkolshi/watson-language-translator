@@ -1,0 +1,20 @@
+{
+  "languages": [
+    {
+      "confidence": 0.9143,
+      "language": "en-US"
+    },
+    {
+      "confidence": 0.0396,
+      "language": "hu-HU"
+    },
+    {
+      "confidence": 0.0093,
+      "language": "ro-RO"
+    },
+    {
+      "confidence": 0.005,
+      "language": "nl-NL"
+    }
+  ]
+}
