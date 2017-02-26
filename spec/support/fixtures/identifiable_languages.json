@@ -1,0 +1,20 @@
+{
+  "languages": [
+      {
+        "language": "af",
+        "name": "Afrikaans"
+      },
+      {
+        "language": "ar",
+        "name": "Arabic"
+      },
+      {
+        "language": "az",
+        "name": "Azerbaijani"
+      },
+      {
+      "language": "ba",
+      "name": "Bashkir"
+    }
+  ]
+}
