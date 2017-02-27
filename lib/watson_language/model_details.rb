@@ -1,4 +1,7 @@
 module WatsonLanguage
-  class ModelDetails
+  class ModelDetails < ActiveMethod::Base
+    def endpoint
+    	"models/#{@options[:model_id]}"
+    end
   end
 end
