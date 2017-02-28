@@ -17,4 +17,7 @@ describe WatsonLanguage::ListModels do
       expect(list_models.models).to eq(list_models.json_result['models'])
     end
   end
+
+  it_should_behave_like "operation_methods", "list_models" ,"models"
+
 end
