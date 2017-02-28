@@ -7,7 +7,7 @@ module WatsonLanguage
 
       def rest_client_api(request_api_url)
         RestClient::Request.execute(
-          method: :get,
+          method: @http_method,
           url: request_api_url,
           user: @username,
           password: @password,

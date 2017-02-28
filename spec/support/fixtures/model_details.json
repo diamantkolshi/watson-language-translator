@@ -1,0 +1,14 @@
+{
+  "models": [{
+    "model_id ": "3e7dfdbe-f757-4150-afee-458e71eb93fb",
+    "source": "en",
+    "target": "es",
+    "base_model_id": "en-es",
+    "customizable": "false",
+    "default": "false",
+    "domain": "travel",
+    "owner": "74a239fa-f2db-42ef-8737-7bf74f49e35f",
+    "status": "available",
+    "name": "mymodel"
+  }]
+}
