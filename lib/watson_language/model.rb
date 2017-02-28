@@ -14,8 +14,8 @@ module WatsonLanguage
     end
 
     def endpoint
-      url = "models"
-      url = "models/#{@options[:model_id]}" if @options[:model_id]
+      return url = "models/#{@options[:model_id]}" if @options[:model_id]
+      url = "models"      
       url << "&#{params_addressable}" unless params_addressable.empty?
       url
     end
