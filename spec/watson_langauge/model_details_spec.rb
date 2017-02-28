@@ -17,4 +17,7 @@ describe WatsonLanguage::ModelDetails do
       expect(model_details.models).to eq(model_details.json_result['models'])
     end
   end
+
+  it_should_behave_like "operation_methods", "model_details" ,"models/en-es"
+
 end
