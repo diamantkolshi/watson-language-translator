@@ -3,7 +3,7 @@ require "addressable/uri"
 
 describe WatsonLanguage::Translator do
   include WatsonLanguage
-  subject(:translator) { described_class.new("Hello", target: "it", source: "en") }
+  subject(:translator) { described_class.new("Hello", source: "en", target: "it") }
 
   before(:each) do
     allow(RestClient::Request).to receive("execute").and_return(json_response("translator.json"))
@@ -34,4 +34,6 @@ describe WatsonLanguage::Translator do
       expect(translator.character_count).to eq(translator.json_result['character_count'])
     end
   end
+
+  it_should_behave_like "operation_methods", "translator" ,"translate?text=Hello&source=en&target=it"
 end
