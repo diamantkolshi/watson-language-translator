@@ -28,6 +28,4 @@ require_relative "watson_language/identifiable_languages.rb"
 require_relative "watson_language/identify.rb"
 require_relative "watson_language/list_models.rb"
 require_relative "watson_language/model_details.rb"
-
-obj = WatsonLanguage::ListModels.new
-puts obj.result
+require_relative "watson_language/model.rb"
