@@ -87,3 +87,4 @@ Fetch all result of translate model
  
 ## License
 
+This project is licensed under the MIT License
