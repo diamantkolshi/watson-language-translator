@@ -1,14 +1,8 @@
 # watson-language-translator
 
-With the IBM Watson™ Language Translator service, you can create an application that identifies the language of input text and uses a domain-specific linguistic model to translate the text into another language.
-
-To translate industry-specific jargon or other types of specialized terminology, you can customize the linguistic model to optimize it for your needs.
+Language Translator translates text from one language to another. The service offers multiple domain-specific models that you can customize based on your unique terminology and language. Use Language Translator to take news from across the globe and present it in your language, communicate with your customers in their own language, and more.
 
 For more informations you can read [here](https://www.ibm.com/watson/developercloud/doc/language-translator/index.html)
-
-
-
-
 
 ## Prerequisites
 
