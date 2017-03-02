@@ -85,6 +85,15 @@ Fetch all result of translate model
     @language_translate.result  # => {"translations"=>[{"translation"=>"Hola"}], "word_count"=>1, "character_count"=>5}
  ```
  
+## Identifiable languages
+Return the list of languages it can detect.
+
+  ```ruby
+    @identifiable_languages = WatsonLanguage::IdentifiableLanguages.fetch
+  
+    @language_translate.result  # => { "languages": [ { "language": "af", "name": "Afrikaans"}, { "language": "ar", "name":                                       "Arabic"} ...] }
+ ```
+ 
 ## License
 
 This project is licensed under the MIT License
