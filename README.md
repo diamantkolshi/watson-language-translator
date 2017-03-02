@@ -91,7 +91,7 @@ Return the list of languages it can detect.
   ```ruby
     @identifiable_languages = WatsonLanguage::IdentifiableLanguages.fetch
   
-    @identifiable_languages.result  # => { "languages": [ { "language": "af", "name": "Afrikaans"}, { "language": "ar",                                                "name": "Arabic" } ...] }
+    @identifiable_languages.result  # => { "languages": [ { "language": "af", "name": "Afrikaans"}, { "language": "ar", "name": "Arabic" } ...] }
  ```
  
 ## License
