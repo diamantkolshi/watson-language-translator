@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe WatsonLanguage::ListModels do
   include WatsonLanguage
-  subject(:list_models) { described_class.new(text: "this is at est") }
+  subject(:list_models) { described_class.fetch }
 
   before(:each) do
     allow(RestClient::Request).to receive("execute").and_return(json_response("list_models.json"))

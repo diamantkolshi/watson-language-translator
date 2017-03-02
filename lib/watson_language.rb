@@ -9,12 +9,12 @@ module WatsonLanguage
     end
 
     def username
-      # ENV['username']
+      # ENV['language_translator_username']
       "4d123cdf-cd4d-4e52-8e9f-032ddd21958b"
     end
 
     def password
-      # ENV['password']
+      # ENV['langauge_translator_password']
       "GiYMXcMbIgiz"
     end
   end
@@ -29,3 +29,10 @@ require_relative "watson_language/identify.rb"
 require_relative "watson_language/list_models.rb"
 require_relative "watson_language/model_details.rb"
 require_relative "watson_language/model.rb"
+
+obj = WatsonLanguage::Translator.new("hello",
+    source: "en",
+    target: "es",
+    http_method: "post"
+  )
+puts obj.result
