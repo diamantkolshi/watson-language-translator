@@ -73,8 +73,6 @@ Then run `bundle install`
 
 Translates input text from the source language to the target language.
 
-Fetch all result of translate model
-
   ```ruby
     @language_translate = WatsonLanguage::Translator.new("hello",
       source: "en",
@@ -85,13 +83,39 @@ Fetch all result of translate model
     @language_translate.result  # => {"translations"=>[{"translation"=>"Hola"}], "word_count"=>1, "character_count"=>5}
  ```
  
-## Identifiable languages
+#### Identifiable languages
 Return the list of languages it can detect.
 
   ```ruby
     @identifiable_languages = WatsonLanguage::IdentifiableLanguages.fetch
   
-    @identifiable_languages.result  # => { "languages": [ { "language": "af", "name": "Afrikaans"}, { "language": "ar", "name": "Arabic" } ...] }
+    @identifiable_languages.result  # => { "languages": [ { "language": "af", "name": "Afrikaans"}, { "language": "ar", "name": "Arabic" }, ...] }
+ ```
+
+#### Identify language
+Identify the language in which a text is written.
+
+ ```ruby
+    @identify_language = WatsonLanguage::IdentifyLanguage.new("this is a text")
+  
+    @identify_language.result  # => { "languages": [ { "confidence": 0.9143, "language": "en-US" }, { "confidence": 0.0396, "language": "hu-HU" }, //... ] }
+ ```
+ 
+#### List Models 
+Lists available models for the Language translator service with option to filter by source or by target language.
+
+ ```ruby
+    @list_models = WatsonLanguage::ListModels.fetch
+  
+    @list_models.result  # => { "models": [ { "model_id ": "3e7dfdbe-f757-4150-afee-458e71eb93fb", "source": "en", "target": "es", "base_model_id": "en-es",.. }, //... ] }
+ ```
+#### Model Details
+Returns information, including training status, about a specified translation model.
+
+ ```ruby
+    @model_details = WatsonLanguage::ModelDetails.fetch(model_id: "en-es")
+  
+    @model_details.result  # => { "models": [ { "model_id ": "3e7dfdbe-f757-4150-afee-458e71eb93fb", "source": "en", "target": "es", "base_model_id": "en-es",.. }, //... ] }
  ```
  
 ## License
