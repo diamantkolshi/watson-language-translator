@@ -32,12 +32,12 @@ watson_langauge_translator will take your username and password and it will do r
 ## Getting Started in ruby
 You can install this library
 
-`gem install 'watson_language_translator'`
+`gem install 'watson-language-translator'`
 
 and use
 
 ```ruby
-require 'watson_language_translator'
+require 'watson-language-translator'
 ```
 
 ## Getting Started in Rails
@@ -45,7 +45,7 @@ AlchemyLanguage works with Rails > 4.1 onwards. You can add it to your Gemfile w
 
 ```ruby
 gem 'rest-client'
-gem 'watson_language_translator'
+gem 'watson-language-translator'
 ```
 
 Then run `bundle install`
