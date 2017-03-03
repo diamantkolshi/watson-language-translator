@@ -9,13 +9,11 @@ module WatsonLanguage
     end
 
     def username
-      # ENV['username']
-      "4d123cdf-cd4d-4e52-8e9f-032ddd21958b"
+      ENV['language_translator_username']
     end
 
     def password
-      # ENV['password']
-      "GiYMXcMbIgiz"
+      ENV['langauge_translator_password']
     end
   end
 end

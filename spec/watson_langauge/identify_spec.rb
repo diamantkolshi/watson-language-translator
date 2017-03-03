@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe WatsonLanguage::Identify do
   include WatsonLanguage
-  subject(:identify) { described_class.new(text: "this is at est") }
+  subject(:identify) { described_class.new("this is at est") }
 
   before(:each) do
     allow(RestClient::Request).to receive("execute").and_return(json_response("identify.json"))
@@ -17,4 +17,7 @@ describe WatsonLanguage::Identify do
       expect(identify.languages).to eq(identify.json_result['languages'])
     end
   end
+
+  it_should_behave_like "operation_methods", "identify" ,"identify?text=this is at est"
+
 end

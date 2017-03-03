@@ -3,19 +3,19 @@ require 'spec_helper'
 describe WatsonLanguage do
   let(:base_request_path) { "https://gateway.watsonplatform.net/language-translator/api/v2" }
   before(:each) do
-    allow(ENV).to receive(:[]).with("username").and_return("language_username")
-    allow(ENV).to receive(:[]).with("password").and_return("language_password")
+    allow(ENV).to receive(:[]).with("language_translator_username").and_return("language_username")
+    allow(ENV).to receive(:[]).with("langauge_translator_password").and_return("language_password")
   end
 
   describe ".username" do
     it "return env varibales" do
-      expect(subject.username).to eq("4d123cdf-cd4d-4e52-8e9f-032ddd21958b")
+      expect(subject.username).to eq("language_username")
     end
   end
 
   describe ".password" do
     it "return env varibales" do
-      expect(subject.password).to eq("GiYMXcMbIgiz")
+      expect(subject.password).to eq("language_password")
     end
   end
 
