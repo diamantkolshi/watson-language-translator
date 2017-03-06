@@ -1,14 +1,33 @@
-Gem::Specification.new do |s|
-  s.name          = 'watson-language-translator'
-  s.version       = '0.1.0'
-  s.date          = '2017-03-03'
-  s.summary       = "Watson Language!"
-  s.description   = "Watson Language Translate content into multiple languages"
-  s.authors       = ["Diamant Kolshi"]
-  s.email         = 'diamantkolshi@gmail.com'
-  s.files         =  Dir.glob("lib/**/*") + %w(README.md)
-  s.homepage      = 'https://github.com/diamantkolshi/watson-language-translator'
-  s.license       = 'MIT'
-  s.require_path  = 'lib'
-  s.executables = `git ls-files -- bin/*`.split('\n').map{ |f| File.basename(f) }
-end 
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'watson-language-translator/version'
+
+Gem::Specification.new do |spec|
+  spec.name         = "watson-language-translator"
+  spec.version      = WatsonLanguage::VERSION
+  spec.authors      = ["Diamant"]
+  spec.email        = ["diamantkolshi@gmail.com"]
+  spec.summary      = "Watson Language!"
+  spec.description  = "Watson Language Translate content into multiple languages"
+  spec.homepage     = 'https://github.com/diamantkolshi/watson-language-translator'
+  spec.license      = "MIT"
+
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+  else
+    raise "RubyGems 2.0 or newer is required to protect against " \
+      "public gem pushes."
+  end
+
+  spec.files         = `git ls-files`
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ["lib"]
+
+  spec.add_development_dependency "bundler", "~> 1.13"
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
+end
